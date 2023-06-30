@@ -1,0 +1,11 @@
+{
+  "editor.quickSuggestions": {
+    "other": "on",
+    "strings": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "json.schemaDownload.enable": true,
+  "tailwindCSS.includeLanguages": { "plaintext": "typescriptreact" }
+}
