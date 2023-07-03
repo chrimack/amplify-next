@@ -1,15 +1,10 @@
+import type { SiteImage } from '@/types/images';
 import { Modal } from '@mui/material';
 import Image from 'next/image';
 
-type Image = {
-  src: string;
-  height: number;
-  width: number;
-};
-
 interface Props {
   handleClose: (_event: {}, reason: 'backdropClick' | 'escapeKeyDown') => void;
-  image: Image | null;
+  image: SiteImage | null;
   isOpen: boolean;
 }
 

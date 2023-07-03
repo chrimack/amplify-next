@@ -1,19 +1,13 @@
-import Image from 'next/image';
 import { GetStaticProps } from 'next';
 import FlexContainer from '@/components/shared/FlexContainer';
 import MissionHeader from '@/components/home/MissionHeader';
 import MissionImageList from '@/components/home/MissionImageList';
 import MissionImageModal from '@/components/home/MissionImageModal';
 import useMissionImages from '@/hooks/useMissionImages';
-
-type Image = {
-  src: string;
-  height: number;
-  width: number;
-};
+import type { SiteImage } from '@/types/images';
 
 interface Props {
-  images: Image[];
+  images: SiteImage[];
 }
 
 export default function Home({ images }: Props) {
@@ -35,7 +29,9 @@ export default function Home({ images }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps<{ images: Image[] }> = async () => {
+export const getStaticProps: GetStaticProps<{
+  images: SiteImage[];
+}> = async () => {
   const page = getRandomInt();
   const api = `https://picsum.photos/v2/list?page=${page}&limit=6`;
 

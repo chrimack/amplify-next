@@ -1,13 +1,8 @@
+import type { SiteImage } from '@/types/images';
 import { useState } from 'react';
 
-type Image = {
-  src: string;
-  height: number;
-  width: number;
-};
-
-export default function useMissionImages(images: Image[]) {
-  const [currentImage, setCurrentImage] = useState<Image | null>(null);
+export default function useMissionImages(images: SiteImage[]) {
+  const [currentImage, setCurrentImage] = useState<SiteImage | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = (i: number) => {

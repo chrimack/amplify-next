@@ -1,15 +1,10 @@
+import type { SiteImage } from '@/types/images';
 import { ImageList, ImageListItem } from '@mui/material';
 import Image from 'next/image';
 
-type Image = {
-  src: string;
-  height: number;
-  width: number;
-};
-
 interface Props {
   handleOpen: (i: number) => void;
-  images: Image[];
+  images: SiteImage[];
 }
 
 export default function MissionImageList({ handleOpen, images }: Props) {

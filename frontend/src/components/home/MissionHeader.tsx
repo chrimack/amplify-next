@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Heading from '../shared/Heading';
 import FlexContainer from '../shared/FlexContainer';
 import Card from '../shared/Card';
-import { ButtonLink } from '../shared/DonateBookLink';
+import { ButtonLink } from '../shared/icons/DonateBookLink';
 import PageHeading from '../shared/PageHeading';
 
 export default function MissionHeader() {

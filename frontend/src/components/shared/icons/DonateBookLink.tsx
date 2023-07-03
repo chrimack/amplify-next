@@ -1,6 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { PropsWithChildren } from 'react';
+import IconLink from './IconLink';
+import { Links } from '@/constants/links';
+import { Icons } from '@/constants/icons';
+import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
+import { IconProps } from '@/types/icon-props';
 
 interface Props {
   className?: string;
@@ -21,16 +25,11 @@ export default function DonateBookLink({
   );
 }
 
-export function IconLink() {
+export function BookIconLink({ color }: IconProps) {
   return (
-    <DonateBookLink>
-      <Image
-        src="/book.svg"
-        alt="Donate a book through Amazon"
-        width={24}
-        height={24}
-      />
-    </DonateBookLink>
+    <Link href={Links.donate} target="_blank">
+      <LibraryBooksOutlinedIcon htmlColor={color} fontSize="large" />
+    </Link>
   );
 }
 

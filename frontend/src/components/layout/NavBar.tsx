@@ -9,7 +9,7 @@ export default function NavBar() {
           <NavLink href={href} key={href} title={title} />
         ))}
       </ul>
-      <ExternalLinks />
+      <ExternalLinks color="white" />
     </nav>
   );
 }
