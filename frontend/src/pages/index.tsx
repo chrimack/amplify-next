@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<{
   images: SiteImage[];
 }> = async () => {
   const page = getRandomInt();
-  const api = `https://picsum.photos/v2/list?page=${page}&limit=6`;
+  const api = `https://picsum.photos/v2/list?page=${page}&limit=12`;
 
   const res = await fetch(api);
   const data: {

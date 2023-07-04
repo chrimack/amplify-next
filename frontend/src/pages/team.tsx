@@ -10,7 +10,7 @@ export default function MeetTheTeam() {
   return (
     <FlexContainer className="gap-8">
       <PageHeading>Meet the Team</PageHeading>
-      <Card>{content}</Card>
+      <Card className="min-w-[700px]">{content}</Card>
 
       <FlexContainer className="flex-wrap gap-8" direction="row">
         {Team.map((teamMember, i) => (

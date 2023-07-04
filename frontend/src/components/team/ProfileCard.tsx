@@ -38,7 +38,7 @@ export default function ProfileCard({ teamMember }: Props) {
             </FlexContainer>
 
             <FlexContainer
-              align="end"
+              align="items-end"
               className="w-full flex-1 gap-2"
               direction="row"
             >

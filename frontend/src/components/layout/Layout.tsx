@@ -11,9 +11,11 @@ export default function Layout({
   className,
 }: PropsWithChildren<Props>) {
   return (
-    <div className={`${className} flex h-screen flex-col font-sans`}>
+    <div
+      className={`${className} flex h-screen max-h-screen flex-col font-sans`}
+    >
       <NavBar />
-      <main className="border-yellow min flex-1 border-[12px] p-10 ">
+      <main className="border-yellow flex-1 border-[12px] p-10 ">
         {children}
       </main>
       <Footer />
