@@ -14,7 +14,7 @@ export default function Heading({
 }: PropsWithChildren<Props>) {
   return createElement(
     priority,
-    { children, className: `${className} font-heading font-normal` },
+    { children, className: `${className} font-serif font-normal` },
     children
   );
 }

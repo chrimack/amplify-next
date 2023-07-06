@@ -5,6 +5,7 @@ import MissionImageList from '@/components/home/MissionImageList';
 import MissionImageModal from '@/components/home/MissionImageModal';
 import useMissionImages from '@/hooks/useMissionImages';
 import type { SiteImage } from '@/types/images';
+import Heading from '@/components/shared/Heading';
 
 interface Props {
   images: SiteImage[];
@@ -15,10 +16,15 @@ export default function Home({ images }: Props) {
     useMissionImages(images);
 
   return (
-    <FlexContainer className="h-full justify-between">
-      <MissionHeader />
-
+    <FlexContainer direction="row" className="h-full gap-8">
       <MissionImageList handleOpen={handleOpen} images={images} />
+
+      <FlexContainer className="h-full w-1/2 justify-around">
+        <Heading className="text-6xl" priority="h1">
+          Layers of Black History
+        </Heading>
+        <MissionHeader />
+      </FlexContainer>
 
       <MissionImageModal
         handleClose={handleClose}

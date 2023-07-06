@@ -15,7 +15,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
-        heading: ['var(--font-patua-one)'],
+        serif: ['var(--font-patua-one)'],
       },
     },
   },

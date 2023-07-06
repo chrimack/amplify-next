@@ -7,11 +7,15 @@ import PageHeading from '../shared/PageHeading';
 
 export default function MissionHeader() {
   return (
-    <FlexContainer className="gap-8">
-      <PageHeading>Our Mission</PageHeading>
-      <Card>{content}</Card>
-      <ButtonLink />
-    </FlexContainer>
+    <Card className="w-full">
+      <FlexContainer className="gap-8">
+        <Heading className="text-4xl" priority="h2">
+          Our Mission
+        </Heading>
+        {content}
+        <ButtonLink />
+      </FlexContainer>
+    </Card>
   );
 }
 

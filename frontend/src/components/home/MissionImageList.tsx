@@ -10,16 +10,15 @@ interface Props {
 export default function MissionImageList({ handleOpen, images }: Props) {
   return (
     <ImageList
-      className="max-h-[480px] w-fit bg-black shadow-lg"
-      variant="quilted"
-      cols={3}
+      className="max-h-[70vh] w-1/2 bg-black shadow-lg"
+      variant="woven"
       gap={8}
     >
       {images.map((image, i) => (
         <ImageListItem key={image.src}>
           <Image
             alt="some stuff"
-            className="h-auto w-80 cursor-pointer border-2 border-black transition-colors hover:border-white"
+            className="h-auto w-96 cursor-pointer border-2 border-black transition-colors hover:border-white"
             src={image.src}
             width={Math.min(image.width, 360)}
             height={Math.min(image.height, 360)}
